@@ -1,0 +1,25 @@
+{
+"name": "Cookie monster",
+"version": "0.6.7",
+"description": "Removes cookies for current URL",
+"manifest_version": 2,
+"browser_action": {
+    "default_icon": "./cookiemonster.png"
+      },
+"content_scripts": [
+  {
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "matches": ["<all_urls>"]
+
+  }
+
+],
+"background": {
+  "scripts": ["background.js"]
+},
+
+  "permissions": [
+      "cookies", "tabs", "http://*/*", "https://*/*"
+  ]
+}
